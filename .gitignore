@@ -2,8 +2,8 @@
 /vendor/
 build/*
 
-# keep the build folder itself
-!build/.empty
+# keep the config files in the build folder
+!build/*.xml
 
 # files
 .DS_Store
