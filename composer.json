@@ -1,6 +1,6 @@
 {
-    "name"        : "corycollier/php-csv-table",
-    "description" : "Creates a table from a csv file.",
+    "name"        : "corycollier/php-csv",
+    "description" : "Parses CSV files in php, for multiple uses",
     "license"     : "MIT",
     "authors"     : [
         {
@@ -24,6 +24,6 @@
     },
 
     "autoload": {
-        "psr-4": { "PhpCsvTable\\": "src/" }
+        "psr-4": { "PhpCsv\\": "src/" }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpCsvTable;
+namespace PhpCsv;
 
 class Table
 {
@@ -56,7 +56,7 @@ class Table
     /**
      * parses a line, and returns an array of parts from it
      *
-     * @param    string $line a comma separated string
+     * @param string $line a comma separated string
      * @return array an array of parts
      */
     protected function getPartsFromLine($line = '')
@@ -67,13 +67,13 @@ class Table
 
     /**
      * Iniit hook.
-     * @return \PhpCsvTable\Table Returns $this, for object-chaining.
+     * @return \PhpCsv\Table Returns $this, for object-chaining.
      */
     public function init()
     {
-        $lines     = $this->_parseFile($this->_filename);
+        $lines   = $this->_parseFile($this->_filename);
         $headers = $this->_getHeadersFromLines($lines);
-        $rows        = $this->_getRowsFromLines($lines);
+        $rows    = $this->_getRowsFromLines($lines);
 
         $this->setHeaders($headers);
         $this->setRows($rows);
@@ -84,7 +84,7 @@ class Table
     /**
      * parses raw line data for rows.
      *
-     * @param    array    $lines The raw array of lines.
+     * @param array $lines The raw array of lines.
      *
      * @return array An array of header information
      */
@@ -145,7 +145,7 @@ class Table
      *
      * @param array $rows An array of rows to use for the data
      *
-     * @return \PhpCsvTable\Table Returns $this, for object-chaining.
+     * @return \PhpCsv\Table Returns $this, for object-chaining.
      */
     public function setRows(array $rows = array())
     {
