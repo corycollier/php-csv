@@ -1,0 +1,12 @@
+# folders
+/vendor/
+build/*
+
+# keep the build folder itself
+!build/.empty
+
+# files
+.DS_Store
+cache.properties
+composer.lock
+
