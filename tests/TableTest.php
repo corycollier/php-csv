@@ -11,7 +11,7 @@ class TableTest extends PHPUnit_Framework_TestCase
   public function testConstructor()
   {
     $file = dirname(__FILE__) . '/data/simple.csv';
-    $sut = new PhpCsv\Table($file);
+    $sut = new Table($file);
   }
 
   /**
