@@ -29,6 +29,13 @@
     </testsuite>
   </testsuites>
 
+  <filter>
+    <whitelist processUncoveredFilesFromWhitelist="true">
+      <directory>../src</directory>
+    </whitelist>
+  </filter>
+
+
   <logging>
    <log type="coverage-html" target="coverage"
       lowUpperBound="50"
