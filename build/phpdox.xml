@@ -10,7 +10,7 @@
     <file extension="html" />
    </build>
 
-   <enrich>
+   <enrich base="${basedir}">
 
     <source type="git">
       <git binary="git" />
@@ -18,7 +18,7 @@
     </source>
 
     <source type="checkstyle">
-      <file name="checkstyle.xml" />
+      <file name="logs/checkstyle.xml" />
     </source>
 
     <source type="phpunit">
@@ -26,11 +26,11 @@
     </source>
 
     <source type="pmd">
-      <file name="pmd.xml" />
+      <file name="logs/pmd.xml" />
     </source>
 
     <source type="phploc">
-      <file name="phploc.xml" />
+      <file name="logs/phploc.xml" />
     </source>
 
    </enrich>
