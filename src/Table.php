@@ -71,11 +71,12 @@ class Table
      */
     public function init()
     {
-        $lines   = $this->_parseFile($this->_filename);
-        $headers = $this->_getHeadersFromLines($lines);
-        $rows    = $this->_getRowsFromLines($lines);
+        $lines = $this->parseFile($this->_filename);
 
+        $headers = $this->getHeadersFromLines($lines);
         $this->setHeaders($headers);
+
+        $rows = $this->getRowsFromLines($lines);
         $this->setRows($rows);
 
         return $this;
@@ -90,7 +91,7 @@ class Table
      */
     protected function getHeadersFromLines(array $lines = array())
     {
-        $parts = $this->_getPartsFromLine($lines[0]);
+        $parts = $this->getPartsFromLine($lines[0]);
         return $parts;
     }
 
@@ -103,7 +104,7 @@ class Table
      */
     public function setHeaders(array $headers = array())
     {
-        $this->_headers = $headers;
+        $this->headers = $headers;
 
         return $this;
     }
@@ -115,7 +116,7 @@ class Table
      */
     public function getHeaders()
     {
-        return $this->_headers;
+        return $this->headers;
     }
 
     /**
@@ -129,11 +130,11 @@ class Table
         $result = array();
         $headers = $this->getHeaders();
         if (! $headers) {
-            throw new ErrorException(self::ERR_HEADERS_MUST_BE_SET);
+            throw new \PhpCsv\Exception(self::ERR_HEADERS_MUST_BE_SET);
         }
 
         foreach ($lines as $line) {
-            $row = $this->_getPartsFromLine($line);
+            $row = $this->getPartsFromLine($line);
             $result[] = array_combine($headers, $row);
         }
 
@@ -149,7 +150,7 @@ class Table
      */
     public function setRows(array $rows = array())
     {
-        $this->_rows = $rows;
+        $this->rows = $rows;
 
         return $this;
     }
@@ -160,6 +161,6 @@ class Table
      */
     public function getRows()
     {
-        return $this->_rows;
+        return $this->rows;
     }
 }
