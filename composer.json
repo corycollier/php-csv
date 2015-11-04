@@ -1,0 +1,24 @@
+{
+    "name"        : "corycollier/php-csv-table",
+    "description" : "Creates a table from a csv file.",
+    "license"     : "MIT",
+    "authors"     : [
+        {
+            "name"  : "Cory Collier",
+            "email" : "corycollier@corycollier.com"
+        }
+    ],
+    "minimum-stability" : "dev",
+    "prefer-stable"     : true,
+    "require-dev"           : {
+        "phploc/phploc"             : "^3.0@dev",
+        "pdepend/pdepend"           : "~2.0",
+        "phpmd/phpmd"               : "dev-master",
+        "squizlabs/php_codesniffer" : "^2.0@dev",
+        "sebastian/phpcpd"          : "^2.0@dev",
+        "phpunit/phpunit"           : "~5.0"
+    },
+    "require": {
+        "theseer/phpdox": "dev-master"
+    }
+}
