@@ -6,5 +6,6 @@ php:
 before_script:
   ./composer.phar update
 script:
-  - phpunit --configuration build/phpunit.xml
+  - ./vendor/bin/phploc --count-tests ./src
+  - ./vendor/bin/phpunit --configuration build/phpunit.xml
   - ./vendor/bin/phpcs --standard=PSR2 --extensions=php --ignore=autoload.php ./src
