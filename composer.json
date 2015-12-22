@@ -1,15 +1,17 @@
 {
-    "name"        : "corycollier/php-csv",
-    "description" : "Parses CSV files in php, for multiple uses",
-    "license"     : "MIT",
-    "authors"     : [
-        {
-            "name"  : "Cory Collier",
-            "email" : "corycollier@corycollier.com"
-        }
-    ],
+    "name"              : "corycollier/php-csv",
+    "description"       : "Parses CSV files in php, for multiple uses",
+    "license"           : "MIT",
     "minimum-stability" : "dev",
     "prefer-stable"     : true,
+    "authors"     : [
+        {
+            "name"     : "Cory Collier",
+            "email"    : "corycollier@corycollier.com",
+            "role"     : "developer",
+            "homepage" : "http://corycollier.com/"
+        }
+    ],
     "require-dev"           : {
         "phploc/phploc"             : "^3.0@dev",
         "pdepend/pdepend"           : "~2.0",
@@ -17,7 +19,8 @@
         "squizlabs/php_codesniffer" : "^2.0@dev",
         "sebastian/phpcpd"          : "^2.0@dev",
         "phpunit/phpunit"           : "~5.0",
-        "theseer/phpdox"            : "dev-master"
+        "theseer/phpdox"            : "dev-master",
+        "satooshi/php-coveralls"    : "^0.7.1"
     },
     "require" : {
         "corycollier/php-cli" : "dev-master"
